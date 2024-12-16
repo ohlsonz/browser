@@ -7,7 +7,7 @@
     </head>
     <body>
         <script>
-            window.addEventListener("message", async (event) => {
+            window.addEventListener("message", (event) => {
                 if (typeof event.data !== "object" || typeof event.data.value !== "string") return;
 
                 const element = document.createElement("textarea");
