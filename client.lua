@@ -1,6 +1,6 @@
 if IsDuplicityVersion() then return end
 
----@param value string
+---@param value any
 exports("setClipboard", function(value)
 	SendNUIMessage({
 		value = value
