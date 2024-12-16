@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            window.addEventListener("message", async (event) => {
+                if (typeof event.data !== "object" || typeof event.data.value !== "string") return;
+
+                const element = document.createElement("textarea");
+                element.value = event.data.value;
+
+                document.body.appendChild(element);
+                element.select();
+
+                document.execCommand("copy");
+                document.body.removeChild(element);
+            });
+        </script>
+    </body>
+</html>
