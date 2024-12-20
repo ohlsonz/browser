@@ -10,7 +10,7 @@
             window.addEventListener("message", (event) => {
                 if (typeof event.data !== "object" || typeof event.data.action !== "string") return;
 
-                const action = event.data.action;
+                const action = event.data.action.toUpperCase();
 
                 if (action === "SET_CLIPBOARD" && typeof event.data.content === "string") {
                     const element = document.createElement("textarea");
