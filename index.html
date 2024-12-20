@@ -8,16 +8,24 @@
     <body>
         <script>
             window.addEventListener("message", (event) => {
-                if (typeof event.data !== "object" || typeof event.data.value !== "string") return;
+                if (typeof event.data !== "object" || typeof event.data.action !== "string") return;
 
-                const element = document.createElement("textarea");
-                element.value = event.data.value;
+                const action = event.data.action;
 
-                document.body.appendChild(element);
-                element.select();
+                if (action === "SET_CLIPBOARD" && typeof event.data.content === "string") {
+                    const element = document.createElement("textarea");
+                    element.value = event.data.content;
 
-                document.execCommand("copy");
-                document.body.removeChild(element);
+                    document.body.appendChild(element);
+                    element.select();
+
+                    document.execCommand("copy");
+                    document.body.removeChild(element);
+                }
+
+                if (action === "OPEN_URL" && typeof event.data.url === "string") {
+                    window.invokeNative("openUrl", event.data.url);
+                }
             });
         </script>
     </body>
