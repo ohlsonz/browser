@@ -1,12 +1,12 @@
 if IsDuplicityVersion() then return end
 
---- @param value string
-local function setClipboard(value)
-	assert(type(value) == "string", ("Failed to set clipboard. Expected string, got %s"):format(type(value)))
+--- @param content string
+local function setClipboard(content)
+	assert(type(content) == "string", ("Failed to set clipboard. Expected string, got %s"):format(type(content)))
 
 	SendNUIMessage({
 		action = "SET_CLIPBOARD",
-		content = value
+		content = content
 	})
 end
 
