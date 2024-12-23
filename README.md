@@ -19,7 +19,7 @@ A lightweight **FiveM browser script** that enhances your server with two essent
 2. Place the resource folder in your server's `resources` directory.
 3. Type `ensure browser` in your server console.
 
-## 🛠️ Usage
+## 🛠️ Usage (LUA)
 Set clipboard
 ```LUA
 exports.browser:setClipboard("foo")
