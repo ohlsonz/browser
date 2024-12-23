@@ -29,7 +29,7 @@ exports.browser:openURL("https://ohlson.dev")
 ```
 
 ## 📜 License
-This project is licensed under the [MIT License](https://github.com/ohlsonz/browser/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/ohlsonz/browser?tab=MIT-1-ov-file).
 Feel free to use, modify, and distribute this script in your projects.
 
 ## 🤝 Contributing
