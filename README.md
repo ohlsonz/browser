@@ -20,11 +20,12 @@ A lightweight **FiveM browser script** that enhances your server with two essent
 3. Type `ensure browser` in your server console.
 
 ## 🛠️ Usage
+Set clipboard
 ```LUA
--- Set clipboard
 exports.browser:setClipboard("foo")
-
--- Open URL
+```
+Open URL
+```LUA
 exports.browser:openURL("https://ohlson.dev")
 ```
 
