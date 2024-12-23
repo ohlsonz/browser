@@ -1,6 +1,6 @@
 if IsDuplicityVersion() then return end
 
---- @param content string
+---@param content string
 local function setClipboard(content)
 	assert(type(content) == "string", ("Failed to set clipboard. Expected string, got %s"):format(type(content)))
 
@@ -10,7 +10,7 @@ local function setClipboard(content)
 	})
 end
 
---- @param url string
+---@param url string
 local function openURL(url)
 	assert(type(url) == "string", ("Failed to open URL. Expected string, got %s"):format(type(url)))
 
