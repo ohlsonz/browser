@@ -1,5 +1,3 @@
-if IsDuplicityVersion() then return end
-
 local SendNUIMessage = SendNUIMessage
 
 ---@param content string
