@@ -1,5 +1,3 @@
-local SendNUIMessage = SendNUIMessage
-
 ---@param content string
 local function setClipboard(content)
 	assert(type(content) == "string", ("Failed to set clipboard. Expected string, got %s."):format(type(content)))
